@@ -3,7 +3,7 @@ import ComponentRenderWithAriaIt
 import Button, { ButtonProps } from '@/shared/ui/buttons/Button/Button.tsx';
 
 
-export default ComponentRenderWithAriaIt<ButtonProps>(Button, {
+export const ButtonRenderWithAriaIt = ComponentRenderWithAriaIt<ButtonProps>(Button, {
     children    : 'loading',
     'aria-label': 'Fetch products',
 }, {

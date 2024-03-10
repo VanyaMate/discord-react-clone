@@ -8,7 +8,7 @@ const App: React.FC<AppProps> = (props) => {
 
     return (
         <div>
-            AppComponent
+            App
         </div>
     );
 };

@@ -3,7 +3,7 @@ import ComponentRenderWithAriaIt
 import IconM, { IconMProps } from '@/shared/ui/icons/IconM/IconM.tsx';
 
 
-export default ComponentRenderWithAriaIt<IconMProps>(IconM, {
+export const IconMRenderWithAriaIt = ComponentRenderWithAriaIt<IconMProps>(IconM, {
     children    : 'edit',
     'aria-label': 'edit product',
 }, {

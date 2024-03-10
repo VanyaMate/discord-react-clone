@@ -3,7 +3,7 @@ import ComponentRenderWithAriaIt
 import Title, { TitleProps } from '@/shared/ui/typography/Title/Title.tsx';
 
 
-export default ComponentRenderWithAriaIt<TitleProps>(Title, {
+export const TitleRenderWithAriaIt = ComponentRenderWithAriaIt<TitleProps>(Title, {
     children    : 'Simple',
     level       : 1,
     'aria-label': 'Simple title',
