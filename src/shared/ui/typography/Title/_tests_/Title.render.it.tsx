@@ -1,9 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import Title from '@/shared/ui/typography/Title/Title.tsx';
+import ComponentRenderIt from '$/_tests_/components/Component.render.it.tsx';
+import Title, { TitleProps } from '@/shared/ui/typography/Title/Title.tsx';
 
 
-export default () => {
-    render(<Title>Simple</Title>);
-    screen.getByRole('heading');
-    screen.getByText('Simple');
-}
+export default ComponentRenderIt<TitleProps>(Title, { children: 'Simple', level: 1 }, {
+    text: 'Simple',
+    role: 'heading',
+});

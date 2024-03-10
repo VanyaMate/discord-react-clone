@@ -1,11 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import Button from '@/shared/ui/buttons/Button/Button.tsx';
-import React from 'react';
+import ComponentRenderIt from '$/_tests_/components/Component.render.it.tsx';
+import Button, { ButtonProps } from '@/shared/ui/buttons/Button/Button.tsx';
 
 
-export default () => {
-    const textButton: string = 'Button';
-    render(<Button>{ textButton }</Button>);
-    screen.getByRole('button');
-    screen.getByText(textButton);
-}
+export default ComponentRenderIt<ButtonProps>(Button, {
+    children: 'edit',
+}, {
+    text: 'edit',
+    role: 'button',
+});

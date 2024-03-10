@@ -12,11 +12,17 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': '/src',
+            '$': '/',
         },
     },
     test   : {
         environment: 'jsdom',
         globals    : true,
         setupFiles : './_tests_/setup.ts',
+        css        : {
+            modules: {
+                classNameStrategy: 'stable',
+            },
+        },
     },
 });
