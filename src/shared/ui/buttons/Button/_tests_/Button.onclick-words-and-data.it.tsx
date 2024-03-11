@@ -3,7 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import Button from '@/shared/ui/buttons/Button/Button.tsx';
 import { expect } from 'vitest';
 import css from '@/shared/ui/buttons/Button/Button.module.scss';
-import { userEvent } from '@testing-library/user-event/setup/index';
+import { userEvent } from '@testing-library/user-event';
 
 
 export default async () => {
@@ -43,10 +43,10 @@ export default async () => {
     const onClickButton: HTMLButtonElement      = screen.getByText('OnClick');
     const onClickAsyncButton: HTMLButtonElement = screen.getByText('OnClickAsync');
 
-    userEvent.click(onClickButton);
+    await userEvent.click(onClickButton);
     expect(onClickWorks).toBe('sync works');
 
-    userEvent.click(onClickAsyncButton);
+    await userEvent.click(onClickAsyncButton);
     expect(onClickAsyncWorks).not.toBe('async works');
 
     await waitFor(() => {
