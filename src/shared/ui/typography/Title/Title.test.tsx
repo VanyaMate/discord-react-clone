@@ -3,7 +3,7 @@ import { TitleRenderIt } from '@/shared/ui/typography/Title/_tests_/Title.render
 import TitleRenderWithLevelIt
     from '@/shared/ui/typography/Title/_tests_/Title.render-with-level.it.tsx';
 import TitleRenderWithStylesIt
-    from '@/shared/ui/typography/Title/_tests_/Title.render-with-styles.it.tsx';
+    from '@/shared/ui/typography/Title/_tests_/Title.render-with-css.it.tsx';
 import { TitleRenderWithAriaIt }
     from '@/shared/ui/typography/Title/_tests_/Title.render-with-aria.it.tsx';
 

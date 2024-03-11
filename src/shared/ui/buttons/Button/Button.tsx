@@ -22,8 +22,8 @@ export type ButtonProps =
     & Omit<React.ComponentPropsWithoutRef<'button'>, 'onClick'>;
 
 const Button: React.FC<ButtonProps> = (props) => {
-    const { onClick, onClickAsync, data, styleType, className, ...other } = props;
-    const [ loading, setLoading ]                                         = useState<boolean>(false);
+    const { onClick, onClickAsync, data, styleType, className, type, ...other } = props;
+    const [ loading, setLoading ]                                               = useState<boolean>(false);
 
     const onClickHandler: React.MouseEventHandler<HTMLButtonElement> = function (event) {
         if (onClick) {
@@ -48,6 +48,8 @@ const Button: React.FC<ButtonProps> = (props) => {
                 )
             }
             onClick={ onClickHandler }
+            // какое классное правило
+            type={ type === 'submit' ? 'submit' : type === 'reset' ? 'reset' : 'button' }
             { ...other }
         />
     );

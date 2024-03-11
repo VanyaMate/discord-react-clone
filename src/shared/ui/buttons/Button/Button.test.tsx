@@ -2,7 +2,7 @@ import { describe, it } from 'vitest';
 import { ButtonRenderIt }
     from '@/shared/ui/buttons/Button/_tests_/Button.render.it.tsx';
 import ButtonRenderWithStylesIt
-    from '@/shared/ui/buttons/Button/_tests_/Button.render-with-styles.it.tsx';
+    from '@/shared/ui/buttons/Button/_tests_/Button.render-with-css.it.tsx';
 import ButtonRenderWithStyletypesIt
     from '@/shared/ui/buttons/Button/_tests_/Button.render-with-styletypes.it.tsx';
 import ButtonOnclickWordsAndDataIt
